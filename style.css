@@ -640,8 +640,8 @@ body::before {
   font-size: 44px;
   font-family: var(--font-accent);
   font-weight: 800;
-  color: rgba(0, 198, 195);
-  /* label color at 30% opacity */
+  color: var(--color-accent);
+  opacity: 0.3; /* 30% opacity */
   line-height: 1;
 }
 
@@ -825,23 +825,28 @@ body::before {
   opacity: 0.9;
 }
 
+.exp-card-header-left {
+  position: relative;
+  z-index: 2;
+  padding-right: 60px;
+}
+
 .exp-card-header-right {
   position: absolute;
   right: 0;
   top: -10px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .exp-card-number {
   font-size: 80px;
   font-family: var(--font-accent);
-  /* Raleway */
   font-weight: 800;
-  /* Extra bold */
-  color: rgba(0, 198, 195);
-  /* 30% label color */
+  color: var(--color-accent);
+  opacity: 0.15; /* 15% opacity watermark */
   line-height: 0.8;
   user-select: none;
+  pointer-events: none;
 }
 
 /* Accordion details toggle visual */
@@ -1523,6 +1528,8 @@ body::before {
   text-decoration: none;
   display: inline-block;
   margin-bottom: 40px;
+  word-break: break-all;
+  max-width: 100%;
 }
 
 /* --- CONNECT PAGE SPECIFICS --- */
@@ -1849,6 +1856,10 @@ body::before {
     padding: 20px;
   }
 
+  .exp-card-header-left {
+    padding-right: 40px;
+  }
+
   .exp-card-number {
     font-size: 50px;
   }
@@ -1870,6 +1881,11 @@ body::before {
 
   .nda-container {
     padding: 25px 15px;
+  }
+
+  .nda-email {
+    font-size: 16px;
+    margin-bottom: 25px;
   }
 
   .connect-page-container {
